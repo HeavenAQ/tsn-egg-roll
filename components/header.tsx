@@ -10,8 +10,10 @@ export default function Header() {
   const pathname = usePathname()
 
   const navItems = [
-    { label: 'ブランド', href: '#brand' },
-    { label: '商品', href: '#product' },
+    { label: 'ブランドの紹介', href: '#brand' },
+    { label: '烏金旺', href: '#brands' },
+    { label: '商品の特徴', href: '#benefits' },
+    { label: '商品の特長', href: '#product' },
     { label: 'お客様の声', href: '#testimonials' },
     { label: '価格', href: '#pricing' },
   ]
@@ -49,7 +51,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Link href={getNavHref('#pricing')}>
+            <Link href={'/links'}>
               <button className="bg-[#C85A54] text-white px-6 py-2 rounded-full hover:bg-[#B34A47] transition-colors font-medium">
                 今すぐ購入
               </button>
@@ -78,7 +80,7 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link href={getNavHref('#pricing')} onClick={handleNavClick}>
+            <Link href={'/links'} onClick={handleNavClick}>
               <button className="w-full bg-[#C85A54] text-white px-6 py-2 rounded-full hover:bg-[#B34A47] transition-colors font-medium mt-4">
                 今すぐ購入
               </button>

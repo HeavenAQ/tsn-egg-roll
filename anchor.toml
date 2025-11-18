@@ -1,0 +1,10 @@
+[lcl-host]
+realm-apid = 'localhost'
+
+[org]
+apid = 'heavenaq'
+
+[service]
+apid = 'frontend'
+category = 'javascript'
+cert-style = 'acme'

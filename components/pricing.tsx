@@ -14,7 +14,7 @@ export default function Pricing() {
         '送料別',
       ],
       popular: true,
-      href: '/checkout', // changed from Stripe official page to custom checkout page
+      href: '/links', // direct to link-in-bio purchase page
     },
     {
       name: 'エンタープライズ',

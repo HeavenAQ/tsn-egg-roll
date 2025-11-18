@@ -30,10 +30,10 @@ export default function NotFound() {
                 ホームに戻る
               </Link>
               <Link
-                href="/#pricing"
+                href="/links"
                 className="inline-flex items-center gap-2 rounded-full border border-[#C85A54]/30 px-6 py-3 text-[#C85A54] hover:border-[#C85A54] hover:bg-[#C85A54]/5 transition-colors"
               >
-                価格を見る
+                購入リンクへ
               </Link>
             </div>
           </div>
@@ -44,4 +44,3 @@ export default function NotFound() {
     </div>
   )
 }
-
