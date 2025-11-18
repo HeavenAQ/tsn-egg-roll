@@ -8,10 +8,19 @@ import (
 )
 
 func (service *Service) setupRoutes() {
-	// setup healthcheck
+	// set up healthcheck
 	service.router.GET("/healthcheck", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"status": "ok",
+		})
+	})
+
+	// set up 404
+	// Define the custom 404 handler using NoRoute
+	service.router.NoRoute(func(c *gin.Context) {
+		c.JSON(http.StatusNotFound, gin.H{
+			"message": "404 Not Found - The requested resource could not be found.",
+			"path":    c.Request.URL.Path,
 		})
 	})
 
@@ -37,6 +46,6 @@ func setupV1PaymentRoutes(v1 *gin.RouterGroup) {
 }
 
 func setupV1StripeRoutes(payment *gin.RouterGroup) {
-	stripe := payment.GET("/stripe")
-	stripe.GET("/create-checkout-session", handler.CreateCheckoutSession)
+	stripe := payment.Group("/stripe")
+	stripe.POST("/create-payment-intent", handler.CreatePaymentIntent)
 }

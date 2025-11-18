@@ -13,8 +13,8 @@ func main() {
 	}
 
 	if err := service.Start(); err != nil {
-		service.ErrorLogger.Fatalf("failed to run server: %v", err)
+		service.Logger.Error.Fatalf("failed to run server: %v", err)
 	}
 
-	service.InfoLogger.Println("Server starts running")
+	service.Logger.Info.Println("Server starts running")
 }

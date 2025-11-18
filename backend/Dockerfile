@@ -12,5 +12,6 @@ RUN GOOS=linux go build -o main cmd/main.go
 FROM ubuntu:latest
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y ca-certificates && update-ca-certificates
 COPY --from=builder /app/main .
 CMD ["./main"]
