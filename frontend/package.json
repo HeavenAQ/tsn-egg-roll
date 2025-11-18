@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "tsn-egg-roll-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,8 +15,6 @@
     "@vis.gl/react-google-maps": "^1.7.1",
     "lucide-react": "^0.454.0",
     "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
