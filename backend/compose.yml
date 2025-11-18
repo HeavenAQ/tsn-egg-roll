@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: egg-roll-backend:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    develop:
+      watch: 
+        - path: .
+          action: rebuild
+          target: /app
+
