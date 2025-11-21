@@ -29,35 +29,18 @@ export default function EnterprisePage() {
     setSending(true)
     setError(null)
 
-    const service_id = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-    const template_id = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-    const public_key = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-
-    if (!service_id || !template_id || !public_key) {
-      setError('メール送信の設定が未完了です。管理者にお問い合わせください。')
-      setSending(false)
-      return
-    }
-
-    const payload = {
-      service_id,
-      template_id,
-      user_id: public_key,
-      template_params: {
-        companyName: formData.companyName,
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        inquiryType: formData.inquiryType,
-        message: formData.message,
-      },
-    }
-
     try {
-      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      const res = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          companyName: formData.companyName,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          inquiryType: formData.inquiryType,
+          message: formData.message,
+        }),
       })
 
       if (!res.ok) throw new Error('Failed to send')
