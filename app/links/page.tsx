@@ -9,7 +9,7 @@ export default function LinksPage() {
         <div className="max-w-lg mx-auto text-center">
           <div className="mx-auto w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-4 ring-[#E8D4CB]/60 shadow-md">
             <ImageWithLoading
-              src="/eggroll-hero.webp"
+              src="/egg-roll-feature.webp"
               alt="からすみエッグロール"
               width={256}
               height={256}
