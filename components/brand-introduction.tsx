@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image"
+import ImageWithLoading from "./image-with-loading"
 
 export default function BrandIntroduction() {
   return (
@@ -16,7 +16,7 @@ export default function BrandIntroduction() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Logo and Brand */}
           <div className="flex flex-col items-center w-80 h-auto mx-auto mb-8">
-            <Image
+            <ImageWithLoading
               src="/nan-hai-rich-brand.webp"
               alt="南海豊 NANHAIRICH"
               width={500}

@@ -11,7 +11,6 @@ export default function Header() {
 
   const navItems = [
     { label: 'ブランドの紹介', href: '#brand' },
-    { label: '烏金旺', href: '#brands' },
     { label: '商品の特徴', href: '#benefits' },
     { label: '商品の特長', href: '#product' },
     { label: 'お客様の声', href: '#testimonials' },

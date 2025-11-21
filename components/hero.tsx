@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image"
+import ImageWithLoading from "./image-with-loading"
 
 export default function Hero() {
   const handleScroll = (id: string) => {
@@ -37,10 +37,11 @@ export default function Hero() {
 
         {/* Right Image */}
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
-          <Image
+          <ImageWithLoading
             src="/eggroll-hero.webp"
             alt="からすみエッグロール"
             className="w-full h-auto rounded-2xl"
+            containerClassName="w-full"
             width={500}
             height={500}
             sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 45vw, 500px"

@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image"
+import ImageWithLoading from "./image-with-loading"
 
 export default function BrandShowcase() {
   return (
@@ -10,7 +10,7 @@ export default function BrandShowcase() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Logo and Brand */}
           <div className="flex flex-col items-center justify-center w-80 h-auto mx-auto">
-            <Image
+            <ImageWithLoading
               src="/wu-jin-wang-brand.webp"
               alt="烏金旺 WU JIN WANG"
               width={500}

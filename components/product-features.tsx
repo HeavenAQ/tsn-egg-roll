@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import ImageWithLoading from './image-with-loading'
 
 export default function ProductFeatures() {
   const features = [
@@ -37,7 +37,7 @@ export default function ProductFeatures() {
 
           {/* Product Image */}
           <div className="flex justify-center">
-            <Image
+            <ImageWithLoading
               src="/egg-roll-feature.webp"
               alt="商品の特長"
               className="w-full max-w-md rounded-2xl"

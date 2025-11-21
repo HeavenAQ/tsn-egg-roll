@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import ImageWithLoading from '@/components/image-with-loading'
 import Link from 'next/link'
 import { ExternalLink, ShoppingBag, Store } from 'lucide-react'
 
@@ -8,7 +8,7 @@ export default function LinksPage() {
       <main className="px-4 sm:px-6 lg:px-8 pt-28 pb-16">
         <div className="max-w-lg mx-auto text-center">
           <div className="mx-auto w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-4 ring-[#E8D4CB]/60 shadow-md">
-            <Image
+            <ImageWithLoading
               src="/eggroll-hero.webp"
               alt="からすみエッグロール"
               width={256}
