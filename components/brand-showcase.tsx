@@ -4,9 +4,14 @@ import ImageWithLoading from "./image-with-loading"
 
 export default function BrandShowcase() {
   return (
-    <section id="brands" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="brand" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-
+        <div className="flex justify-center mb-12">
+          <div className="text-center">
+            <h3 className="text-[#C85A54] font-bold text-lg mb-2">ブランドの紹介</h3>
+            <div className="w-24 h-1 bg-[#C85A54] mx-auto rounded-full"></div>
+          </div>
+        </div>
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Logo and Brand */}
           <div className="flex flex-col items-center justify-center w-80 h-auto mx-auto">

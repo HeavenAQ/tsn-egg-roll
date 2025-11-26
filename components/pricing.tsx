@@ -6,7 +6,7 @@ export default function Pricing() {
   const plans = [
     {
       name: 'パーソナル',
-      price: '¥2,500',
+      price: '¥1,500',
       description: '個人購入向け',
       items: [
         'からすみエッグロール 100g',

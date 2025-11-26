@@ -32,8 +32,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="text-2xl font-bold text-[#C85A54]">南海豊</div>
-            <div className="text-xs text-gray-600">NANHAIRICH</div>
+            <div className="text-2xl font-bold text-[#C85A54]">烏金旺</div>
+            <div className="text-xs text-gray-600">WU JIN WANG</div>
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,6 +1,6 @@
 'use client'
 
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
+import { Mail, Phone, Facebook, Instagram, Twitter } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-white font-bold text-lg">南海豊 NANHAIRICH</h3>
+            <h3 className="text-white font-bold text-lg">烏金旺 WU JIN WANG</h3>
             <p className="text-sm leading-relaxed">
               台湾の海鮮文化を世界へ発信する企業です。
             </p>
@@ -67,16 +67,16 @@ export default function Footer() {
                   利用規約
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-[#7FD8BE] transition-colors">
-                  配送について
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#7FD8BE] transition-colors">
-                  返品・交換
-                </a>
-              </li>
+              {/* <li> */}
+              {/*   <a href="#" className="hover:text-[#7FD8BE] transition-colors"> */}
+              {/*     配送について */}
+              {/*   </a> */}
+              {/* </li> */}
+              {/* <li> */}
+              {/*   <a href="#" className="hover:text-[#7FD8BE] transition-colors"> */}
+              {/*     返品・交換 */}
+              {/*   </a> */}
+              {/* </li> */}
             </ul>
           </div>
 
@@ -94,7 +94,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={16} className="flex-shrink-0 mt-0.5 text-[#7FD8BE]" />
-                <span>cassandra@twtsn.co.jp</span>
+                <span>info@twtsn.co.jp</span>
               </li>
             </ul>
           </div>
@@ -105,7 +105,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; 2025 南海豊 NANHAIRICH. All rights reserved.</p>
+          <p>&copy; 2025  烏金旺 WU JIN WANG. All rights reserved.</p>
           <p className="text-gray-500">株式会社tsn 蔡欣珊</p>
         </div>
       </div>
