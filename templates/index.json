@@ -5,7 +5,8 @@
       "settings": {
         "brand_ja": "烏金旺",
         "brand_en": "WU JIN WANG",
-        "cta_label": "今すぐ購入"
+        "cta_label": "今すぐ購入",
+        "cta_link": "/links"
       },
       "blocks": {
         "link-1": {
@@ -38,6 +39,7 @@
         "title_line_2": "からすみエッグロール",
         "description": "台湾産の高級からすみを使った、米と卵の香ばしい煎餅。伝統の味と現代のおいしさが融合した、贅沢な一品です。",
         "cta_label": "今すぐ購入",
+        "cta_link": "/links",
         "launch_note": "2025年9月1日 販売開始",
         "image_alt": "からすみエッグロール"
       }
@@ -136,7 +138,8 @@
             "item_1": "からすみエッグロール 100g",
             "item_2": "簡易パッケージ",
             "item_3": "送料別",
-            "button_label": "今すぐ購入"
+            "button_label": "今すぐ購入",
+            "button_link": "/links"
           }
         },
         "p2": {
@@ -149,7 +152,8 @@
             "item_1": "カスタムパッケージ対応",
             "item_2": "配送手配",
             "item_3": "専任担当者サポート",
-            "button_label": "お問い合わせ"
+            "button_label": "お問い合わせ",
+            "button_link": "/enterprise"
           }
         }
       },
@@ -164,7 +168,9 @@
         "info_title": "情報",
         "contact_title": "お問い合わせ",
         "policy_1_label": "プライバシーポリシー",
+        "policy_1_url": "#",
         "policy_2_label": "利用規約",
+        "policy_2_url": "#",
         "phone_1": "072-284-9617",
         "phone_2": "090-6829-2359",
         "email": "info@twtsn.co.jp",

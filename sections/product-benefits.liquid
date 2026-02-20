@@ -10,7 +10,7 @@
         {% if section.settings.image != blank %}
           {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', alt: section.settings.image_alt, class: 'card' }}
         {% else %}
-          <img class="card" src="{{ 'nan-hai-rich-brand.webp' | asset_url }}" alt="{{ section.settings.image_alt | escape }}" loading="lazy">
+          <img class="card" src="{{ 'egg-roll-feature.webp' | asset_url }}" alt="{{ section.settings.image_alt | escape }}" loading="lazy">
         {% endif %}
       </div>
 
