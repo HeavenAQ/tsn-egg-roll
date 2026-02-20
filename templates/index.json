@@ -168,6 +168,10 @@
         "feature-5",
         "feature-6"
       ],
+      "custom_css": [
+        "section {background-color: white;}",
+        "img {box-shadow: none;}"
+      ],
       "settings": {
         "eyebrow": "商品の特長",
         "image_alt": "商品の特長"
