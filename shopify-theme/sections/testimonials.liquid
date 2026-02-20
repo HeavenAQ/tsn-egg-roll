@@ -1,0 +1,75 @@
+<section class="section panel-soft" id="testimonials">
+  <div class="site-width">
+    <div class="section-title-wrap">
+      <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="testimonials-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'testimonial' %}
+          <article class="testimonial">
+            <div class="stars">{% for i in (1..block.settings.rating) %}★{% endfor %}</div>
+            <p>{{ block.settings.text }}</p>
+            <p><strong>{{ block.settings.name }}</strong><br>{{ block.settings.role }}</p>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "お客様の声" }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Name", "default": "田中太郎 様" },
+        { "type": "text", "id": "role", "label": "Role", "default": "会社員 (50代)" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "からすみの風味が素晴らしく、何度もリピートしています。" },
+        { "type": "range", "id": "rating", "label": "Rating", "min": 1, "max": 5, "step": 1, "default": 5 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "name": "田中太郎 様",
+            "role": "会社員 (50代)",
+            "text": "からすみの風味が素晴らしく、何度もリピートしています。高級感があるのにどこか親しみやすい味わいが好きです。",
+            "rating": 5
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "name": "鈴木美咲 様",
+            "role": "グルメライター (40代)",
+            "text": "台湾からすみの豊かな風味と、米の優しい香ばしさの調和が完璧です。ギフトとしても何度も利用しています。",
+            "rating": 5
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "name": "佐藤健太 様",
+            "role": "食品業界 (60代)",
+            "text": "素材の質にこだわりを感じられます。無添加、グルテンフリーという点も現代ニーズに合致しています。",
+            "rating": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

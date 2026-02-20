@@ -1,0 +1,61 @@
+<section class="section panel-soft" id="product">
+  <div class="site-width">
+    <div class="section-title-wrap">
+      <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="grid two-col" style="align-items: center;">
+      <div>
+        <ul class="feature-list">
+          {% for block in section.blocks %}
+            {% if block.type == 'feature' %}
+              <li><span class="check">✓</span>{{ block.settings.text }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        {% if section.settings.image != blank %}
+          {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', alt: section.settings.image_alt, class: 'card' }}
+        {% else %}
+          <img class="card" src="{{ 'egg-roll-feature.webp' | asset_url }}" alt="{{ section.settings.image_alt | escape }}" loading="lazy">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Features",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "商品の特長" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt", "default": "商品の特長" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "台湾伝統の天日干し「からすみ」使用" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Features",
+      "blocks": [
+        { "type": "feature", "settings": { "text": "台湾伝統の天日干し「からすみ」使用" } },
+        { "type": "feature", "settings": { "text": "無添加・グルテンフリー（小麦粉不使用）" } },
+        { "type": "feature", "settings": { "text": "農薬不使用の高品質米使用" } },
+        { "type": "feature", "settings": { "text": "抗生物質不使用の卵を使用" } },
+        { "type": "feature", "settings": { "text": "手作りならではの軽やかな食感と風味" } },
+        { "type": "feature", "settings": { "text": "ギフトにも対応する高級感あるパッケージ" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

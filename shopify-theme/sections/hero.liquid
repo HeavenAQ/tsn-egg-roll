@@ -1,0 +1,42 @@
+<section class="section hero" id="hero">
+  <div class="site-width">
+    <div class="grid">
+      <div>
+        <h1>{{ section.settings.title_line_1 }}</h1>
+        <h2>{{ section.settings.title_line_2 }}</h2>
+        <p>{{ section.settings.description }}</p>
+
+        <a class="btn btn-primary" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+
+        {% if section.settings.launch_note != blank %}
+          <p class="hero-date">{{ section.settings.launch_note }}</p>
+        {% endif %}
+      </div>
+
+      <div class="hero-image-wrap">
+        {% if section.settings.image != blank %}
+          {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', alt: section.settings.image_alt }}
+        {% else %}
+          <img src="{{ 'eggroll-hero.webp' | asset_url }}" alt="{{ section.settings.image_alt | escape }}" loading="lazy">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    { "type": "text", "id": "title_line_1", "label": "Title line 1", "default": "台湾の高級珍味で作った" },
+    { "type": "text", "id": "title_line_2", "label": "Title line 2", "default": "からすみエッグロール" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "台湾産の高級からすみを使った、米と卵の香ばしい煎餅。伝統の味と現代のおいしさが融合した、贅沢な一品です。" },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "今すぐ購入" },
+    { "type": "url", "id": "cta_link", "label": "CTA link" },
+    { "type": "text", "id": "launch_note", "label": "Launch note", "default": "2025年9月1日 販売開始" },
+    { "type": "image_picker", "id": "image", "label": "Hero image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt", "default": "からすみエッグロール" }
+  ],
+  "presets": [{ "name": "Hero" }]
+}
+{% endschema %}

@@ -1,0 +1,88 @@
+<footer class="section footer" id="footer">
+  <div class="site-width">
+    <div class="footer-grid">
+      <div>
+        <h3>{{ section.settings.brand }}</h3>
+        <p>{{ section.settings.summary }}</p>
+      </div>
+
+      <div>
+        <h4>{{ section.settings.links_title }}</h4>
+        <ul class="link-list">
+          {% for block in section.blocks %}
+            {% if block.type == 'quick_link' %}
+              <li><a href="{{ block.settings.url }}">{{ block.settings.label }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h4>{{ section.settings.info_title }}</h4>
+        <ul class="link-list">
+          {% if section.settings.policy_1_label != blank %}<li><a href="{{ section.settings.policy_1_url }}">{{ section.settings.policy_1_label }}</a></li>{% endif %}
+          {% if section.settings.policy_2_label != blank %}<li><a href="{{ section.settings.policy_2_url }}">{{ section.settings.policy_2_label }}</a></li>{% endif %}
+        </ul>
+      </div>
+
+      <div>
+        <h4>{{ section.settings.contact_title }}</h4>
+        <ul class="contact-list">
+          {% if section.settings.phone_1 != blank %}<li>{{ section.settings.phone_1 }}</li>{% endif %}
+          {% if section.settings.phone_2 != blank %}<li>{{ section.settings.phone_2 }}</li>{% endif %}
+          {% if section.settings.email != blank %}<li>{{ section.settings.email }}</li>{% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>{{ section.settings.copyright }}</p>
+      <p>{{ section.settings.company }}</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "brand", "label": "Brand", "default": "烏金旺 WU JIN WANG" },
+    { "type": "textarea", "id": "summary", "label": "Summary", "default": "台湾の海鮮文化を世界へ発信する企業です。" },
+    { "type": "text", "id": "links_title", "label": "Quick links title", "default": "クイックリンク" },
+    { "type": "text", "id": "info_title", "label": "Info title", "default": "情報" },
+    { "type": "text", "id": "contact_title", "label": "Contact title", "default": "お問い合わせ" },
+    { "type": "text", "id": "policy_1_label", "label": "Policy 1 label", "default": "プライバシーポリシー" },
+    { "type": "url", "id": "policy_1_url", "label": "Policy 1 URL" },
+    { "type": "text", "id": "policy_2_label", "label": "Policy 2 label", "default": "利用規約" },
+    { "type": "url", "id": "policy_2_url", "label": "Policy 2 URL" },
+    { "type": "text", "id": "phone_1", "label": "Phone 1", "default": "072-284-9617" },
+    { "type": "text", "id": "phone_2", "label": "Phone 2", "default": "090-6829-2359" },
+    { "type": "text", "id": "email", "label": "Email", "default": "info@twtsn.co.jp" },
+    { "type": "text", "id": "copyright", "label": "Copyright", "default": "© 2025 烏金旺 WU JIN WANG. All rights reserved." },
+    { "type": "text", "id": "company", "label": "Company", "default": "株式会社tsn 蔡欣珊" }
+  ],
+  "blocks": [
+    {
+      "type": "quick_link",
+      "name": "Quick link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "ホーム" },
+        { "type": "text", "id": "url", "label": "URL", "default": "#" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "blocks": [
+        { "type": "quick_link", "settings": { "label": "ホーム", "url": "#" } },
+        { "type": "quick_link", "settings": { "label": "ブランド紹介", "url": "#brand" } },
+        { "type": "quick_link", "settings": { "label": "商品情報", "url": "#product" } },
+        { "type": "quick_link", "settings": { "label": "価格プラン", "url": "#pricing" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

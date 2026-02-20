@@ -1,0 +1,76 @@
+<header class="header" id="site-header-{{ section.id }}">
+  <div class="site-width">
+    <div class="header-inner">
+      <a class="brand" href="{{ routes.root_url }}">
+        <span class="brand-ja">{{ section.settings.brand_ja }}</span>
+        <span class="brand-en">{{ section.settings.brand_en }}</span>
+      </a>
+
+      <nav class="nav-links">
+        {% for block in section.blocks %}
+          {% if block.type == 'nav_link' %}
+            <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+
+      <a class="btn btn-primary desktop-buy" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+
+      <button
+        class="mobile-toggle"
+        type="button"
+        data-mobile-nav-toggle
+        data-target="#mobile-nav-{{ section.id }}"
+        aria-controls="mobile-nav-{{ section.id }}"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        ☰
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav-{{ section.id }}" data-open="false">
+      {% for block in section.blocks %}
+        {% if block.type == 'nav_link' %}
+          <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+        {% endif %}
+      {% endfor %}
+      <a class="btn btn-primary" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+    </nav>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Landing Header",
+  "settings": [
+    { "type": "text", "id": "brand_ja", "label": "Brand (Japanese)", "default": "烏金旺" },
+    { "type": "text", "id": "brand_en", "label": "Brand (English)", "default": "WU JIN WANG" },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "今すぐ購入" },
+    { "type": "url", "id": "cta_link", "label": "CTA link" }
+  ],
+  "blocks": [
+    {
+      "type": "nav_link",
+      "name": "Navigation link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "ブランドの紹介" },
+        { "type": "text", "id": "link", "label": "Link", "default": "#brand" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Landing Header",
+      "blocks": [
+        { "type": "nav_link", "settings": { "label": "ブランドの紹介", "link": "#brand" } },
+        { "type": "nav_link", "settings": { "label": "商品の特徴", "link": "#benefits" } },
+        { "type": "nav_link", "settings": { "label": "商品の特長", "link": "#product" } },
+        { "type": "nav_link", "settings": { "label": "お客様の声", "link": "#testimonials" } },
+        { "type": "nav_link", "settings": { "label": "価格", "link": "#pricing" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

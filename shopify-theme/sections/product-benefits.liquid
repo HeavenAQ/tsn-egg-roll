@@ -1,0 +1,63 @@
+<section class="section panel-soft" id="benefits">
+  <div class="site-width">
+    <div class="section-title-wrap">
+      <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="grid two-col" style="align-items: center;">
+      <div>
+        {% if section.settings.image != blank %}
+          {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', alt: section.settings.image_alt, class: 'card' }}
+        {% else %}
+          <img class="card" src="{{ 'nan-hai-rich-brand.webp' | asset_url }}" alt="{{ section.settings.image_alt | escape }}" loading="lazy">
+        {% endif %}
+      </div>
+
+      <div>
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.description }}</p>
+
+        <ul class="benefit-list">
+          {% for block in section.blocks %}
+            {% if block.type == 'benefit' %}
+              <li><span class="check">✓</span>{{ block.settings.text }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Benefits",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "商品の特徴" },
+    { "type": "text", "id": "title", "label": "Title", "default": "こだわりの素材で作られた逸品" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "台湾伝統の圧縮天日干し製法で作られたからすみと、上質な農薬不使用の米、抗生物質不使用の卵を使用。すべて自然派志向で、保存料・膨張剤も不使用です。" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt", "default": "商品の特徴" }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit item",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "グルテンフリー（小麦粉不使用）" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Benefits",
+      "blocks": [
+        { "type": "benefit", "settings": { "text": "グルテンフリー（小麦粉不使用）" } },
+        { "type": "benefit", "settings": { "text": "合成着色料不使用" } },
+        { "type": "benefit", "settings": { "text": "100% 自然素材" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

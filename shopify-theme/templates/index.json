@@ -1,0 +1,183 @@
+{
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "brand_ja": "烏金旺",
+        "brand_en": "WU JIN WANG",
+        "cta_label": "今すぐ購入"
+      },
+      "blocks": {
+        "link-1": {
+          "type": "nav_link",
+          "settings": { "label": "ブランドの紹介", "link": "#brand" }
+        },
+        "link-2": {
+          "type": "nav_link",
+          "settings": { "label": "商品の特徴", "link": "#benefits" }
+        },
+        "link-3": {
+          "type": "nav_link",
+          "settings": { "label": "商品の特長", "link": "#product" }
+        },
+        "link-4": {
+          "type": "nav_link",
+          "settings": { "label": "お客様の声", "link": "#testimonials" }
+        },
+        "link-5": {
+          "type": "nav_link",
+          "settings": { "label": "価格", "link": "#pricing" }
+        }
+      },
+      "block_order": ["link-1", "link-2", "link-3", "link-4", "link-5"]
+    },
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "title_line_1": "台湾の高級珍味で作った",
+        "title_line_2": "からすみエッグロール",
+        "description": "台湾産の高級からすみを使った、米と卵の香ばしい煎餅。伝統の味と現代のおいしさが融合した、贅沢な一品です。",
+        "cta_label": "今すぐ購入",
+        "launch_note": "2025年9月1日 販売開始",
+        "image_alt": "からすみエッグロール"
+      }
+    },
+    "benefits": {
+      "type": "product-benefits",
+      "settings": {
+        "eyebrow": "商品の特徴",
+        "title": "こだわりの素材で作られた逸品",
+        "description": "台湾伝統の圧縮天日干し製法で作られたからすみと、上質な農薬不使用の米、抗生物質不使用の卵を使用。すべて自然派志向で、保存料・膨張剤も不使用です。",
+        "image_alt": "商品の特徴"
+      },
+      "blocks": {
+        "benefit-1": { "type": "benefit", "settings": { "text": "グルテンフリー（小麦粉不使用）" } },
+        "benefit-2": { "type": "benefit", "settings": { "text": "合成着色料不使用" } },
+        "benefit-3": { "type": "benefit", "settings": { "text": "100% 自然素材" } }
+      },
+      "block_order": ["benefit-1", "benefit-2", "benefit-3"]
+    },
+    "brand": {
+      "type": "brand-showcase",
+      "settings": {
+        "eyebrow": "ブランドの紹介",
+        "title": "烏金旺",
+        "body_1": "烏金旺（WU JIN WANG）は、家族や家屋の繁栄を願う想いが込められたブランドです。",
+        "body_2": "原字は「烏」「金」「旺」の組み合わせで、古代の竹簡のような独特な書体で表現されており、複製不可の特別な感を演出します。",
+        "body_3": "家庭や家屋の繁栄、家庭運・財運・昇進を願う縁起の良いブランドとして、新築祝いや昇進祝いなどの贈答品としても好まれています。",
+        "image_alt": "烏金旺 WU JIN WANG"
+      }
+    },
+    "features": {
+      "type": "product-features",
+      "settings": {
+        "eyebrow": "商品の特長",
+        "image_alt": "商品の特長"
+      },
+      "blocks": {
+        "feature-1": { "type": "feature", "settings": { "text": "台湾伝統の天日干し「からすみ」使用" } },
+        "feature-2": { "type": "feature", "settings": { "text": "無添加・グルテンフリー（小麦粉不使用）" } },
+        "feature-3": { "type": "feature", "settings": { "text": "農薬不使用の高品質米使用" } },
+        "feature-4": { "type": "feature", "settings": { "text": "抗生物質不使用の卵を使用" } },
+        "feature-5": { "type": "feature", "settings": { "text": "手作りならではの軽やかな食感と風味" } },
+        "feature-6": { "type": "feature", "settings": { "text": "ギフトにも対応する高級感あるパッケージ" } }
+      },
+      "block_order": ["feature-1", "feature-2", "feature-3", "feature-4", "feature-5", "feature-6"]
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": { "eyebrow": "お客様の声" },
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "name": "田中太郎 様",
+            "role": "会社員 (50代)",
+            "text": "からすみの風味が素晴らしく、何度もリピートしています。高級感があるのにどこか親しみやすい味わいが好きです。",
+            "rating": 5
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "name": "鈴木美咲 様",
+            "role": "グルメライター (40代)",
+            "text": "台湾からすみの豊かな風味と、米の優しい香ばしさの調和が完璧です。ギフトとしても何度も利用しています。",
+            "rating": 5
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "name": "佐藤健太 様",
+            "role": "食品業界 (60代)",
+            "text": "素材の質にこだわりを感じられます。無添加、グルテンフリーという点も現代ニーズに合致しています。",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": ["t1", "t2", "t3"]
+    },
+    "pricing": {
+      "type": "pricing",
+      "settings": {
+        "eyebrow": "価格プラン",
+        "popular_badge": "おすすめ"
+      },
+      "blocks": {
+        "p1": {
+          "type": "plan",
+          "settings": {
+            "popular": true,
+            "name": "パーソナル",
+            "description": "個人購入向け",
+            "price": "¥1,500",
+            "item_1": "からすみエッグロール 100g",
+            "item_2": "簡易パッケージ",
+            "item_3": "送料別",
+            "button_label": "今すぐ購入"
+          }
+        },
+        "p2": {
+          "type": "plan",
+          "settings": {
+            "popular": false,
+            "name": "エンタープライズ",
+            "description": "法人・大量購入向け",
+            "price": "カスタム",
+            "item_1": "カスタムパッケージ対応",
+            "item_2": "配送手配",
+            "item_3": "専任担当者サポート",
+            "button_label": "お問い合わせ"
+          }
+        }
+      },
+      "block_order": ["p1", "p2"]
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "brand": "烏金旺 WU JIN WANG",
+        "summary": "台湾の海鮮文化を世界へ発信する企業です。",
+        "links_title": "クイックリンク",
+        "info_title": "情報",
+        "contact_title": "お問い合わせ",
+        "policy_1_label": "プライバシーポリシー",
+        "policy_2_label": "利用規約",
+        "phone_1": "072-284-9617",
+        "phone_2": "090-6829-2359",
+        "email": "info@twtsn.co.jp",
+        "copyright": "© 2025 烏金旺 WU JIN WANG. All rights reserved.",
+        "company": "株式会社tsn 蔡欣珊"
+      },
+      "blocks": {
+        "f1": { "type": "quick_link", "settings": { "label": "ホーム", "url": "#" } },
+        "f2": { "type": "quick_link", "settings": { "label": "ブランド紹介", "url": "#brand" } },
+        "f3": { "type": "quick_link", "settings": { "label": "商品情報", "url": "#product" } },
+        "f4": { "type": "quick_link", "settings": { "label": "価格プラン", "url": "#pricing" } }
+      },
+      "block_order": ["f1", "f2", "f3", "f4"]
+    }
+  },
+  "order": ["header", "hero", "benefits", "brand", "features", "testimonials", "pricing", "footer"]
+}

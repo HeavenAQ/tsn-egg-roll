@@ -1,0 +1,10 @@
+{
+  "templates": {
+    "404": {
+      "subtext": "お探しのページは見つかりませんでした。"
+    }
+  },
+  "general": {
+    "continue_shopping": "トップへ戻る"
+  }
+}
