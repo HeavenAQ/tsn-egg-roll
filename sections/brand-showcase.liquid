@@ -16,7 +16,7 @@
 
       <div>
         <h2>{{ section.settings.title }}</h2>
-        <p>{{ section.settings.body_1 }}</p>
+        <p><span class="brand-highlight">{{ section.settings.brand_name }}</span>{{ section.settings.body_1 }}</p>
         <p>{{ section.settings.body_2 }}</p>
         <p>{{ section.settings.body_3 }}</p>
       </div>
@@ -30,9 +30,10 @@
   "settings": [
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "ブランドの紹介" },
     { "type": "text", "id": "title", "label": "Title", "default": "烏金旺" },
-    { "type": "textarea", "id": "body_1", "label": "Paragraph 1", "default": "烏金旺（WU JIN WANG）は、家族や家屋の繁栄を願う想いが込められたブランドです。" },
+    { "type": "text", "id": "brand_name", "label": "Brand name (highlighted)", "default": "烏金旺（WU JIN WANG）" },
+    { "type": "textarea", "id": "body_1", "label": "Paragraph 1", "default": " は、家族や家屋の繁栄を願う想いが込められたブランドです。" },
     { "type": "textarea", "id": "body_2", "label": "Paragraph 2", "default": "原字は「烏」「金」「旺」の組み合わせで、古代の竹簡のような独特な書体で表現されており、複製不可の特別な感を演出します。" },
-    { "type": "textarea", "id": "body_3", "label": "Paragraph 3", "default": "家庭や家屋の繁栄、家庭運・財運・昇進を願う縁起の良いブランドとして、新築祝いや昇進祝いなどの贈答品としても好まれています。" },
+    { "type": "textarea", "id": "body_3", "label": "Paragraph 3", "default": "家庭や家屋の繁栄、家庭運・財運・昇進を願う縁起の良いブランドとして、新築祝いや家のお売買、昇進祝いなどの贈答品としても好まれています。" },
     { "type": "image_picker", "id": "image", "label": "Brand image" },
     { "type": "text", "id": "image_alt", "label": "Image alt", "default": "烏金旺 WU JIN WANG" }
   ],

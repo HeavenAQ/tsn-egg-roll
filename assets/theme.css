@@ -9,7 +9,7 @@
   --border-soft: #e8d4cb;
   --radius-lg: 16px;
   --radius-pill: 999px;
-  --container: 1200px;
+  --container: 1280px;
 }
 
 * {
@@ -44,7 +44,7 @@ img {
 }
 
 .section {
-  padding: 72px 0;
+  padding: 80px 0;
 }
 
 .section-title-wrap {
@@ -125,20 +125,20 @@ img {
 }
 
 .brand-ja {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1;
 }
 
 .brand-en {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--color-muted);
 }
 
 .nav-links {
   display: none;
-  gap: 24px;
+  gap: 32px;
 }
 
 .desktop-buy {
@@ -251,6 +251,11 @@ img {
   color: var(--color-accent);
   font-weight: 700;
   margin-right: 10px;
+}
+
+.brand-highlight {
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .testimonials-grid {
