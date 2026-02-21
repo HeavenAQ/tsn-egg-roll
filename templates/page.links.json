@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-links",
+      "blocks": {
+        "amazon": {
+          "type": "link",
+          "settings": {
+            "label": "Amazonで購入",
+            "url": "https://www.amazon.co.jp/",
+            "variant": "primary",
+            "open_new_tab": true
+          }
+        },
+        "rakuten": {
+          "type": "link",
+          "settings": {
+            "label": "楽天で購入",
+            "url": "https://www.rakuten.co.jp/",
+            "variant": "secondary",
+            "open_new_tab": true
+          }
+        }
+      },
+      "block_order": ["amazon", "rakuten"],
+      "settings": {
+        "title": "南海豊 からすみエッグロール",
+        "subtitle": "公式購入リンク"
+      }
+    }
+  },
+  "order": ["main"]
+}

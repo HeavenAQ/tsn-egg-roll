@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-links",
+      "settings": {
+        "title": "南海豊 からすみエッグロール",
+        "subtitle": "公式購入リンク"
+      }
+    }
+  },
+  "order": ["main"]
+}

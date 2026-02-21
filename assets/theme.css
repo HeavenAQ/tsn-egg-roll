@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #fffaf7;
+  --color-text: #1f2937;
+  --color-primary: #c85a54;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}

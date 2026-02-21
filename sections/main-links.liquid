@@ -1,0 +1,229 @@
+<section class="links-page">
+  <div class="links-page__inner">
+    <div class="links-page__avatar-wrap">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 512 | image_tag: class: 'links-page__avatar', alt: section.settings.title }}
+      {% else %}
+        <img
+          class="links-page__avatar"
+          src="{{ 'egg-roll-feature.webp' | asset_url }}"
+          alt="{{ section.settings.title | escape }}"
+          loading="eager"
+          width="256"
+          height="256"
+        >
+      {% endif %}
+    </div>
+
+    {% if section.settings.title != blank %}
+      <h1 class="links-page__title">{{ section.settings.title }}</h1>
+    {% endif %}
+
+    {% if section.settings.subtitle != blank %}
+      <p class="links-page__subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    <div class="links-page__actions">
+      {% for block in section.blocks %}
+        {% assign style_class = 'links-page__button--secondary' %}
+        {% if block.settings.variant == 'primary' %}
+          {% assign style_class = 'links-page__button--primary' %}
+        {% endif %}
+
+        <a
+          class="links-page__button {{ style_class }}"
+          href="{{ block.settings.url }}"
+          {% if block.settings.open_new_tab %}
+            target="_blank"
+            rel="noopener noreferrer"
+          {% endif %}
+          {{ block.shopify_attributes }}
+        >
+          <span class="links-page__button-text">{{ block.settings.label }}</span>
+          <span class="links-page__external" aria-hidden="true">↗</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .links-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #fdf6f3, #ffffff);
+    padding: 112px 16px 64px;
+  }
+
+  .links-page__inner {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .links-page__avatar-wrap {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto;
+    border-radius: 999px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.15);
+    border: 4px solid rgba(232, 212, 203, 0.6);
+  }
+
+  .links-page__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .links-page__title {
+    margin: 24px 0 0;
+    font-size: 32px;
+    line-height: 1.25;
+    color: #111827;
+  }
+
+  .links-page__subtitle {
+    margin: 8px 0 0;
+    font-size: 16px;
+    color: #6b7280;
+  }
+
+  .links-page__actions {
+    margin-top: 32px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .links-page__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 999px;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .links-page__button-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .links-page__external {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .links-page__button--primary {
+    background: #c85a54;
+    color: #ffffff;
+  }
+
+  .links-page__button--primary:hover {
+    background: #b34a47;
+  }
+
+  .links-page__button--secondary {
+    border-color: rgba(200, 90, 84, 0.3);
+    color: #c85a54;
+    background: #ffffff;
+  }
+
+  .links-page__button--secondary:hover {
+    border-color: #c85a54;
+    background: rgba(200, 90, 84, 0.05);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Main links",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "南海豊 からすみエッグロール"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "公式購入リンク"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Amazonで購入"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        },
+        {
+          "type": "select",
+          "id": "variant",
+          "label": "Style",
+          "default": "primary",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "open_new_tab",
+          "label": "Open in new tab",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Product links",
+      "blocks": [
+        {
+          "type": "link",
+          "settings": {
+            "label": "Amazonで購入",
+            "variant": "primary"
+          }
+        },
+        {
+          "type": "link",
+          "settings": {
+            "label": "楽天で購入",
+            "variant": "secondary"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
