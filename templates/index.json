@@ -57,9 +57,7 @@
       ],
       "settings": {
         "brand_ja": "烏金旺",
-        "brand_en": "WU JIN WANG",
-        "cta_label": "今すぐ購入",
-        "cta_link": "/links"
+        "brand_en": "WU JIN WANG"
       }
     },
     "hero": {
@@ -70,7 +68,7 @@
         "description": "台湾産の高級からすみを使った、米と卵の香ばしい煎餅。伝統の味と現代のおいしさが融合した、贅沢な一品です。",
         "cta_label": "再入荷通知",
         "cta_link": "https://lin.ee/wN7EAvh",
-        "launch_note": "LINE連携してくれたお客様に、商品が再入荷した際に通知届けしています！",
+        "launch_note": "LINEで友だち追加すると、商品が再入荷した際に通知届けしています！",
         "image_alt": "からすみエッグロール"
       }
     },
