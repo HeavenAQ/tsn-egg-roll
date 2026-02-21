@@ -69,8 +69,8 @@
         "title_line_2": "からすみエッグロール",
         "description": "台湾産の高級からすみを使った、米と卵の香ばしい煎餅。伝統の味と現代のおいしさが融合した、贅沢な一品です。",
         "cta_label": "再入荷通知",
-        "cta_link": "/links",
-        "launch_note": "入荷待ち",
+        "cta_link": "https://lin.ee/wN7EAvh",
+        "launch_note": "LINE連携してくれたお客様に、商品が再入荷した際に通知届けしています！",
         "image_alt": "からすみエッグロール"
       }
     },
@@ -231,7 +231,7 @@
             "item_2": "簡易パッケージ",
             "item_3": "送料別",
             "button_label": "再入荷通知",
-            "button_link": "/links"
+            "button_link": "https://lin.ee/wN7EAvh"
           }
         },
         "p2": {
