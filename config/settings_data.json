@@ -1,5 +1,24 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "sections": {}
+    "content_for_index": [],
+    "blocks": {
+      "17283525856706501396": {
+        "type": "shopify://apps/crm-plus-on-line-line-up/blocks/associate-id-banner/dfcb190e-14c5-48cb-b5be-c67ed2b16b21",
+        "disabled": false,
+        "settings": {
+          "message": "LINE連携してくれたお客様に、お得な情報をお届けしています！",
+          "bannerPosition": "right-bottom"
+        }
+      }
+    }
   }
 }
