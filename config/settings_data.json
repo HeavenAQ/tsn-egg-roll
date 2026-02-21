@@ -15,7 +15,7 @@
         "type": "shopify://apps/crm-plus-on-line-line-up/blocks/associate-id-banner/dfcb190e-14c5-48cb-b5be-c67ed2b16b21",
         "disabled": false,
         "settings": {
-          "message": "LINE連携してくれたお客様に、お得な情報をお届けしています！",
+          "message": "LINE連携してくれたお客様に、商品が再入荷した際に通知届けしています！",
           "bannerPosition": "right-bottom"
         }
       }
